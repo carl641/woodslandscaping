@@ -8,7 +8,7 @@ function renderHeader() {
   header.innerHTML = `
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="${base}" class="nav-logo">Woods Landscaping &amp; Dirt Work LLC</a>
+      <a href="${base}" class="nav-logo"><img src="${base}images/woodslogo.png" alt="Woods Landscaping &amp; Dirt Work LLC" class="nav-logo-img"></a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
