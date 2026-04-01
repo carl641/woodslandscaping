@@ -716,11 +716,12 @@ img {
   border-radius: var(--radius);
   overflow: hidden;
   transition: all var(--transition);
+  cursor: pointer;
 }
 
 .gallery-item img {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: 250px;
   object-fit: cover;
   display: block;
   transition: all var(--transition);
@@ -728,6 +729,67 @@ img {
 
 .gallery-item:hover img {
   transform: scale(1.03);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 12px;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
+}
+
+.lightbox-close {
+  top: 16px;
+  right: 24px;
+  font-size: 3rem;
+}
+
+.lightbox-prev {
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .gallery-item.hidden {
