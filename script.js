@@ -8,7 +8,7 @@ function renderHeader() {
   header.innerHTML = `
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="${base}" class="nav-logo">Woods Landscaping</a>
+      <a href="${base}" class="nav-logo">Woods Landscaping &amp; Dirt Work LLC</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -83,7 +83,7 @@ function renderFooter() {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3>Woods Landscaping</h3>
+          <h3>Woods Landscaping &amp; Dirt Work LLC</h3>
           <p>Ardmore, AL &mdash; Limestone County</p>
           <a href="tel:+12567143490">(256) 714-3490</a>
           <p class="footer-payment">Cash &bull; Check &bull; Venmo</p>
@@ -112,7 +112,7 @@ function renderFooter() {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Woods Landscaping. All rights reserved. Fully Licensed &amp; Insured.</p>
+        <p>&copy; 2026 Woods Landscaping &amp; Dirt Work LLC. All rights reserved. Fully Licensed &amp; Insured.</p>
       </div>
     </div>
   </footer>`;
@@ -151,7 +151,7 @@ function initContactForm() {
     const name = formData.get('name');
     form.innerHTML = `
       <div style="text-align: center; padding: 40px 20px;">
-        <div style="font-size: 3rem; margin-bottom: 16px;">&#9989;</div>
+        <div style="font-size: 3rem; margin-bottom: 16px;"><i class="fa-solid fa-circle-check" style="color: var(--color-primary);"></i></div>
         <h3 style="margin-bottom: 12px;">Thanks, ${name || 'friend'}!</h3>
         <p style="opacity: 0.9;">We received your quote request. Patrick will get back to you soon!</p>
         <p style="margin-top: 16px; opacity: 0.8;">Need it sooner? Call or text <a href="tel:+12567143490" style="color: #f57c00; font-weight: 700;">(256) 714-3490</a></p>
