@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <!-- Trunk -->
+  <rect x="85" y="150" width="30" height="80" rx="4" fill="#6D4C2A"/>
+  <rect x="90" y="155" width="8" height="70" rx="2" fill="#5A3D1E" opacity="0.4"/>
+
+  <!-- Root flares -->
+  <ellipse cx="82" cy="228" rx="14" ry="5" fill="#6D4C2A"/>
+  <ellipse cx="118" cy="228" rx="14" ry="5" fill="#6D4C2A"/>
+
+  <!-- Canopy layers (bottom to top for depth) -->
+  <!-- Bottom layer -->
+  <ellipse cx="100" cy="130" rx="70" ry="40" fill="#2E7D32"/>
+  <!-- Middle layer -->
+  <ellipse cx="100" cy="105" rx="58" ry="38" fill="#388E3C"/>
+  <!-- Upper layer -->
+  <ellipse cx="100" cy="78" rx="45" ry="34" fill="#43A047"/>
+  <!-- Top layer -->
+  <ellipse cx="100" cy="55" rx="30" ry="26" fill="#4CAF50"/>
+
+  <!-- Leaf highlights -->
+  <ellipse cx="75" cy="95" rx="12" ry="8" fill="#66BB6A" opacity="0.6"/>
+  <ellipse cx="120" cy="75" rx="10" ry="7" fill="#66BB6A" opacity="0.5"/>
+  <ellipse cx="100" cy="45" rx="8" ry="6" fill="#81C784" opacity="0.5"/>
+
+  <!-- Shadow under canopy on trunk -->
+  <ellipse cx="100" cy="152" rx="22" ry="6" fill="#1B5E20" opacity="0.3"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="235" rx="50" ry="8" fill="#1B5E20" opacity="0.15"/>
+</svg>
