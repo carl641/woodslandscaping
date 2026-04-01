@@ -27,9 +27,9 @@ function renderHeader() {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Service Areas <span class="caret">&#9662;</span></a>
           <ul class="dropdown-menu">
-            <li><a href="${base}service-areas/limestone-county/index.html">Limestone County</a></li>
+            <li><a href="${base}service-areas/limestone-county.html">Limestone County</a></li>
             <li><a href="${base}service-areas/limestone-county/athens.html">&nbsp;&nbsp;Athens, AL</a></li>
-            <li><a href="${base}service-areas/morgan-county/index.html">Morgan County</a></li>
+            <li><a href="${base}service-areas/morgan-county.html">Morgan County</a></li>
             <li><a href="${base}service-areas/morgan-county/decatur.html">&nbsp;&nbsp;Decatur, AL</a></li>
           </ul>
         </li>
@@ -99,9 +99,9 @@ function renderFooter() {
         </div>
         <div class="footer-col">
           <h4>Service Areas</h4>
-          <a href="${base}service-areas/limestone-county/index.html">Limestone County</a>
+          <a href="${base}service-areas/limestone-county.html">Limestone County</a>
           <a href="${base}service-areas/limestone-county/athens.html">Athens, AL</a>
-          <a href="${base}service-areas/morgan-county/index.html">Morgan County</a>
+          <a href="${base}service-areas/morgan-county.html">Morgan County</a>
           <a href="${base}service-areas/morgan-county/decatur.html">Decatur, AL</a>
         </div>
         <div class="footer-col">
