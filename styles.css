@@ -409,6 +409,7 @@ img {
 .service-icon {
   font-size: 2.5rem;
   margin-bottom: 12px;
+  color: var(--color-primary);
 }
 
 .service-card h3 {
@@ -581,6 +582,7 @@ img {
 .equipment-icon {
   font-size: 3rem;
   margin-bottom: 12px;
+  color: var(--color-primary);
 }
 
 .equipment-item h3 {
@@ -638,6 +640,7 @@ img {
 
 .badge-icon {
   font-size: 1.2rem;
+  color: var(--color-primary);
 }
 
 .home-cta {
