@@ -8,26 +8,9 @@
   <title>Woods Landscaping — Ardmore, AL | Dirt Work, Land Clearing & More</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-base="">
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="nav-logo">Woods Landscaping</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#equipment">Equipment</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service-area">Service Area</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact" class="btn btn-nav">Get a Quote</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="site-header"></div>
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
@@ -38,21 +21,21 @@
       <p class="hero-location">Ardmore, AL &mdash; Serving Limestone County &amp; Surrounding Areas</p>
       <a href="tel:+12567143490" class="hero-phone">(256) 714-3490</a>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
         <a href="tel:+12567143490" class="btn btn-secondary">Call Patrick Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services" id="services">
+  <!-- Services Overview -->
+  <section class="home-services" id="services">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
       <p class="section-subtitle">From dirt work to finished lawns — we handle it all.</p>
 
       <div class="services-grid">
 
-        <div class="service-category">
+        <div class="service-card">
           <div class="service-icon">&#9874;</div>
           <h3>Dirt &amp; Grading</h3>
           <ul>
@@ -61,9 +44,10 @@
             <li>Soil Conditioning</li>
             <li>Terrace Leveling</li>
           </ul>
+          <a href="services/dirt-grading.html" class="btn btn-outline">Learn More</a>
         </div>
 
-        <div class="service-category">
+        <div class="service-card">
           <div class="service-icon">&#127794;</div>
           <h3>Land Clearing</h3>
           <ul>
@@ -72,9 +56,10 @@
             <li>Fence &amp; Tree Line Cleanup</li>
             <li>Bamboo Removal</li>
           </ul>
+          <a href="services/land-clearing.html" class="btn btn-outline">Learn More</a>
         </div>
 
-        <div class="service-category">
+        <div class="service-card">
           <div class="service-icon">&#127959;</div>
           <h3>Construction Support</h3>
           <ul>
@@ -83,9 +68,10 @@
             <li>Demo &amp; Hauling</li>
             <li>Pool Pads</li>
           </ul>
+          <a href="services/construction-support.html" class="btn btn-outline">Learn More</a>
         </div>
 
-        <div class="service-category">
+        <div class="service-card">
           <div class="service-icon">&#128167;</div>
           <h3>Underground &amp; Utilities</h3>
           <ul>
@@ -94,9 +80,10 @@
             <li>Frost-Free Hydrants</li>
             <li>PVC Pipe</li>
           </ul>
+          <a href="services/underground-utilities.html" class="btn btn-outline">Learn More</a>
         </div>
 
-        <div class="service-category">
+        <div class="service-card">
           <div class="service-icon">&#128739;</div>
           <h3>Surface Materials</h3>
           <ul>
@@ -104,9 +91,10 @@
             <li>Sand &amp; Dirt Delivery</li>
             <li>Driveway Resurfacing</li>
           </ul>
+          <a href="services/surface-materials.html" class="btn btn-outline">Learn More</a>
         </div>
 
-        <div class="service-category">
+        <div class="service-card">
           <div class="service-icon">&#127793;</div>
           <h3>Lawn &amp; Landscaping</h3>
           <ul>
@@ -115,6 +103,7 @@
             <li>Top Dressing</li>
             <li>Flower Beds &amp; Mulch</li>
           </ul>
+          <a href="services/lawn-landscaping.html" class="btn btn-outline">Learn More</a>
         </div>
 
       </div>
@@ -151,130 +140,38 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery" id="gallery">
+  <!-- About Snippet -->
+  <section class="home-about" id="about">
     <div class="container">
-      <h2 class="section-title">Project Gallery</h2>
-      <p class="section-subtitle">See our work in action across Limestone County and beyond.</p>
-      <div class="gallery-categories">
-        <button class="gallery-filter active" data-filter="all">All</button>
-        <button class="gallery-filter" data-filter="dirt-work">Dirt Work</button>
-        <button class="gallery-filter" data-filter="sod-lawn">Sod &amp; Lawn</button>
-        <button class="gallery-filter" data-filter="clearing">Land Clearing</button>
-        <button class="gallery-filter" data-filter="gravel">Gravel &amp; Driveways</button>
-        <button class="gallery-filter" data-filter="construction">Construction</button>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item" data-category="dirt-work">
-          <div class="gallery-placeholder">
-            <span>Yard Grading Project</span>
+      <div class="home-about-grid">
+        <div class="home-about-text">
+          <h2>About Woods Landscaping</h2>
+          <p>Woods Landscaping is owned and operated by <strong>Patrick Woods</strong>, based right here in <strong>Ardmore, Alabama</strong>. What started as a passion for the land has grown into a full-service dirt work, landscaping, and construction support business serving Limestone County and the surrounding areas.</p>
+          <p>We take pride in every job — whether it's grading a yard, clearing a lot, laying sod, or running water lines. We treat every property like it's our own and every customer like family.</p>
+          <div class="about-badges">
+            <div class="badge">
+              <span class="badge-icon">&#9989;</span>
+              <span>Fully Licensed</span>
+            </div>
+            <div class="badge">
+              <span class="badge-icon">&#128737;</span>
+              <span>Fully Insured</span>
+            </div>
+            <div class="badge">
+              <span class="badge-icon">&#127969;</span>
+              <span>Family-Run</span>
+            </div>
           </div>
-        </div>
-        <div class="gallery-item" data-category="sod-lawn">
-          <div class="gallery-placeholder">
-            <span>Sod Installation</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="clearing">
-          <div class="gallery-placeholder">
-            <span>Land Clearing</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="gravel">
-          <div class="gallery-placeholder">
-            <span>Driveway Resurfacing</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="construction">
-          <div class="gallery-placeholder">
-            <span>New Construction Yard</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="dirt-work">
-          <div class="gallery-placeholder">
-            <span>Ditch Cleanout</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="construction">
-          <div class="gallery-placeholder">
-            <span>Pool Pad</span>
-          </div>
-        </div>
-        <div class="gallery-item" data-category="sod-lawn">
-          <div class="gallery-placeholder">
-            <span>Flower Bed &amp; Mulch</span>
-          </div>
+          <p style="margin-top: 24px;">
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+          </p>
         </div>
       </div>
-      <p class="gallery-note">Follow us on <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> for more project photos!</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container about-container">
-      <div class="about-text">
-        <h2 class="section-title">About Woods Landscaping</h2>
-        <p>Woods Landscaping is owned and operated by <strong>Patrick Woods</strong>, based right here in <strong>Ardmore, Alabama</strong>. What started as a passion for the land has grown into a full-service dirt work, landscaping, and construction support business serving Limestone County and the surrounding areas.</p>
-        <p>We take pride in every job — whether it's grading a yard, clearing a lot, laying sod, or running water lines. We treat every property like it's our own and every customer like family.</p>
-        <div class="about-badges">
-          <div class="badge">
-            <span class="badge-icon">&#9989;</span>
-            <span>Fully Licensed</span>
-          </div>
-          <div class="badge">
-            <span class="badge-icon">&#128737;</span>
-            <span>Fully Insured</span>
-          </div>
-          <div class="badge">
-            <span class="badge-icon">&#127969;</span>
-            <span>Family-Run</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Area Section -->
-  <section class="service-area" id="service-area">
-    <div class="container">
-      <h2 class="section-title">Service Area</h2>
-      <p class="section-subtitle">Based in Ardmore, AL — proudly serving Limestone County and beyond.</p>
-      <div class="area-grid">
-        <div class="area-card area-primary">
-          <h3>Home Base</h3>
-          <p>Ardmore, AL<br>Limestone County</p>
-        </div>
-        <div class="area-card">
-          <h3>Surrounding Counties</h3>
-          <ul>
-            <li>Madison County</li>
-            <li>Morgan County</li>
-            <li>Lawrence County</li>
-            <li>Lauderdale County</li>
-            <li>Colbert County</li>
-            <li>Lincoln County, TN</li>
-            <li>Giles County, TN</li>
-          </ul>
-        </div>
-        <div class="area-card">
-          <h3>Nearby Cities</h3>
-          <ul>
-            <li>Athens, AL</li>
-            <li>Decatur, AL</li>
-            <li>Huntsville, AL</li>
-            <li>Fayetteville, TN</li>
-            <li>Elkton, TN</li>
-            <li>Pulaski, TN</li>
-          </ul>
-        </div>
-      </div>
-      <p class="area-note">Don't see your area? Give us a call — we're willing to travel!</p>
     </div>
   </section>
 
   <!-- Reviews Section -->
-  <section class="reviews" id="reviews">
+  <section class="home-reviews" id="reviews">
     <div class="container">
       <h2 class="section-title">What Our Customers Say</h2>
       <p class="section-subtitle">We let our work speak for itself.</p>
@@ -302,85 +199,20 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <!-- CTA Banner -->
+  <section class="home-cta">
     <div class="container">
-      <h2 class="section-title">Get a Free Quote</h2>
-      <p class="section-subtitle">Ready to get started? Reach out today.</p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <h3>Call or Text Patrick</h3>
-            <a href="tel:+12567143490" class="contact-phone">(256) 714-3490</a>
-          </div>
-          <div class="contact-item">
-            <h3>Payment Methods</h3>
-            <p>Cash &bull; Check &bull; Venmo</p>
-          </div>
-          <div class="contact-item">
-            <h3>Location</h3>
-            <p>Ardmore, AL<br>Limestone County</p>
-          </div>
-          <a href="tel:+12567143490" class="btn btn-primary btn-large">Call or Text Patrick</a>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="John Smith">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(256) 555-1234">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com">
-          </div>
-          <div class="form-group">
-            <label for="jobType">Type of Job</label>
-            <select id="jobType" name="jobType">
-              <option value="">Select a service...</option>
-              <option value="dirt-grading">Dirt &amp; Grading</option>
-              <option value="land-clearing">Land Clearing</option>
-              <option value="construction">Construction Support</option>
-              <option value="underground">Underground &amp; Utilities</option>
-              <option value="materials">Surface Materials / Delivery</option>
-              <option value="lawn">Lawn &amp; Landscaping</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Tell Us About Your Project</label>
-            <textarea id="message" name="message" rows="4" placeholder="Describe what you need done..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-large">Send Quote Request</button>
-        </form>
+      <h2>Ready to Get Started?</h2>
+      <p>Call or text Patrick today for a free estimate on your next project.</p>
+      <a href="tel:+12567143490" class="cta-phone">(256) 714-3490</a>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-large">Request a Quote</a>
+        <a href="tel:+12567143490" class="btn btn-secondary btn-large">Call Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>Woods Landscaping</h3>
-          <p>Ardmore, AL &mdash; Limestone County</p>
-          <a href="tel:+12567143490">(256) 714-3490</a>
-        </div>
-        <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#equipment">Equipment</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Woods Landscaping. All rights reserved. Fully Licensed &amp; Insured.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <script src="script.js"></script>
 </body>
