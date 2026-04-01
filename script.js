@@ -8,33 +8,33 @@ function renderHeader() {
   header.innerHTML = `
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="${base}index.html" class="nav-logo">Woods Landscaping</a>
+      <a href="${base}" class="nav-logo">Woods Landscaping</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li class="dropdown">
-          <a href="${base}services/index.html" class="dropdown-toggle">Services <span class="caret">&#9662;</span></a>
+          <a href="${base}services/" class="dropdown-toggle">Services <span class="caret">&#9662;</span></a>
           <ul class="dropdown-menu">
-            <li><a href="${base}services/dirt-grading.html">Dirt &amp; Grading</a></li>
-            <li><a href="${base}services/land-clearing.html">Land Clearing</a></li>
-            <li><a href="${base}services/construction-support.html">Construction Support</a></li>
-            <li><a href="${base}services/underground-utilities.html">Underground &amp; Utilities</a></li>
-            <li><a href="${base}services/surface-materials.html">Surface Materials</a></li>
-            <li><a href="${base}services/lawn-landscaping.html">Lawn &amp; Landscaping</a></li>
+            <li><a href="${base}services/dirt-grading">Dirt &amp; Grading</a></li>
+            <li><a href="${base}services/land-clearing">Land Clearing</a></li>
+            <li><a href="${base}services/construction-support">Construction Support</a></li>
+            <li><a href="${base}services/underground-utilities">Underground &amp; Utilities</a></li>
+            <li><a href="${base}services/surface-materials">Surface Materials</a></li>
+            <li><a href="${base}services/lawn-landscaping">Lawn &amp; Landscaping</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Service Areas <span class="caret">&#9662;</span></a>
           <ul class="dropdown-menu">
-            <li><a href="${base}service-areas/limestone-county.html">Limestone County</a></li>
-            <li><a href="${base}service-areas/limestone-county/athens.html">&nbsp;&nbsp;Athens, AL</a></li>
-            <li><a href="${base}service-areas/morgan-county.html">Morgan County</a></li>
-            <li><a href="${base}service-areas/morgan-county/decatur.html">&nbsp;&nbsp;Decatur, AL</a></li>
+            <li><a href="${base}service-areas/limestone-county">Limestone County</a></li>
+            <li><a href="${base}service-areas/limestone-county/athens">&nbsp;&nbsp;Athens, AL</a></li>
+            <li><a href="${base}service-areas/morgan-county">Morgan County</a></li>
+            <li><a href="${base}service-areas/morgan-county/decatur">&nbsp;&nbsp;Decatur, AL</a></li>
           </ul>
         </li>
-        <li><a href="${base}gallery.html">Gallery</a></li>
-        <li><a href="${base}contact.html" class="btn btn-nav">Get a Quote</a></li>
+        <li><a href="${base}gallery">Gallery</a></li>
+        <li><a href="${base}contact" class="btn btn-nav">Get a Quote</a></li>
       </ul>
     </div>
   </nav>`;
@@ -90,24 +90,24 @@ function renderFooter() {
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="${base}services/dirt-grading.html">Dirt &amp; Grading</a>
-          <a href="${base}services/land-clearing.html">Land Clearing</a>
-          <a href="${base}services/construction-support.html">Construction Support</a>
-          <a href="${base}services/underground-utilities.html">Underground &amp; Utilities</a>
-          <a href="${base}services/surface-materials.html">Surface Materials</a>
-          <a href="${base}services/lawn-landscaping.html">Lawn &amp; Landscaping</a>
+          <a href="${base}services/dirt-grading">Dirt &amp; Grading</a>
+          <a href="${base}services/land-clearing">Land Clearing</a>
+          <a href="${base}services/construction-support">Construction Support</a>
+          <a href="${base}services/underground-utilities">Underground &amp; Utilities</a>
+          <a href="${base}services/surface-materials">Surface Materials</a>
+          <a href="${base}services/lawn-landscaping">Lawn &amp; Landscaping</a>
         </div>
         <div class="footer-col">
           <h4>Service Areas</h4>
-          <a href="${base}service-areas/limestone-county.html">Limestone County</a>
-          <a href="${base}service-areas/limestone-county/athens.html">Athens, AL</a>
-          <a href="${base}service-areas/morgan-county.html">Morgan County</a>
-          <a href="${base}service-areas/morgan-county/decatur.html">Decatur, AL</a>
+          <a href="${base}service-areas/limestone-county">Limestone County</a>
+          <a href="${base}service-areas/limestone-county/athens">Athens, AL</a>
+          <a href="${base}service-areas/morgan-county">Morgan County</a>
+          <a href="${base}service-areas/morgan-county/decatur">Decatur, AL</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="${base}gallery.html">Gallery</a>
-          <a href="${base}contact.html">Contact</a>
+          <a href="${base}gallery">Gallery</a>
+          <a href="${base}contact">Contact</a>
           <a href="tel:+12567143490">Call Patrick</a>
         </div>
       </div>
@@ -159,10 +159,58 @@ function initContactForm() {
   });
 }
 
+// ===== Hero Image Slider (lazy loaded) =====
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+
+  let current = 0;
+  let loaded = 0;
+
+  function loadSlide(index) {
+    const slide = slides[index];
+    if (slide.style.backgroundImage) return;
+    const src = slide.dataset.src;
+    if (!src) return;
+    const img = new Image();
+    img.onload = function () {
+      slide.style.backgroundImage = 'url(' + src + ')';
+      loaded++;
+      if (loaded === 1) startRotation();
+    };
+    img.src = src;
+  }
+
+  function startRotation() {
+    setInterval(function () {
+      slides[current].classList.remove('active');
+      slides[current].setAttribute('aria-hidden', 'true');
+      current = (current + 1) % slides.length;
+      loadSlide((current + 1) % slides.length);
+      slides[current].classList.add('active');
+      slides[current].setAttribute('aria-hidden', 'false');
+    }, 5000);
+  }
+
+  // Defer loading until after the page is interactive
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () {
+      loadSlide(0);
+      loadSlide(1);
+    });
+  } else {
+    setTimeout(function () {
+      loadSlide(0);
+      loadSlide(1);
+    }, 200);
+  }
+}
+
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
   renderFooter();
   initGalleryFilters();
   initContactForm();
+  initHeroSlider();
 });
