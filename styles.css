@@ -146,6 +146,7 @@ img {
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition);
+  overflow: visible;
 }
 
 .navbar.scrolled {
@@ -160,9 +161,24 @@ img {
 }
 
 .nav-logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-logo-img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.4s ease;
+  margin-top: 25px;
+}
+
+.navbar.scrolled .nav-logo-img {
+  height: 55px;
+  margin-top: 0;
 }
 
 .nav-links {
@@ -1116,6 +1132,16 @@ img {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  .nav-logo-img {
+    height: 80px;
+    margin-top: 15px;
+  }
+
+  .navbar.scrolled .nav-logo-img {
+    height: 45px;
+    margin-top: 0;
+  }
+
   .nav-toggle {
     display: flex;
   }
