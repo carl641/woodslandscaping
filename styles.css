@@ -635,6 +635,14 @@ img {
   margin-bottom: 16px;
 }
 
+.home-about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
 .about-badges {
   display: flex;
   gap: 16px;
