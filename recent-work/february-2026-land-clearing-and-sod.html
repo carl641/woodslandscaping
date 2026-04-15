@@ -36,25 +36,13 @@
             <span><i class="fa-solid fa-location-dot"></i> Limestone County, AL</span>
             <span><i class="fa-regular fa-calendar"></i> February 2026</span>
           </p>
-          <div class="project-slider" id="projectSlider">
-            <div class="project-slider-track">
-              <div class="project-slide active" style="--slide-bg: url('https://51g8k6uool.ucarecd.net/2220963e-4c7b-436a-bef5-9131d6d8122a/-/preview/459x1000/');"><img src="https://51g8k6uool.ucarecd.net/2220963e-4c7b-436a-bef5-9131d6d8122a/-/preview/459x1000/" alt="February 2026 land clearing and sod project - photo 1"></div>
-              <div class="project-slide" style="--slide-bg: url('https://51g8k6uool.ucarecd.net/751caff9-0812-4105-92c4-49d71576170f/-/preview/999x750/');"><img src="https://51g8k6uool.ucarecd.net/751caff9-0812-4105-92c4-49d71576170f/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 2"></div>
-              <div class="project-slide" style="--slide-bg: url('https://51g8k6uool.ucarecd.net/49811694-ed60-4efd-9ddf-0a48ad702c5c/-/preview/999x750/');"><img src="https://51g8k6uool.ucarecd.net/49811694-ed60-4efd-9ddf-0a48ad702c5c/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 3"></div>
-              <div class="project-slide" style="--slide-bg: url('https://51g8k6uool.ucarecd.net/09f9ba46-7647-48bb-9666-7667dd5decba/-/preview/999x750/');"><img src="https://51g8k6uool.ucarecd.net/09f9ba46-7647-48bb-9666-7667dd5decba/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 4"></div>
-              <div class="project-slide" style="--slide-bg: url('https://51g8k6uool.ucarecd.net/ce5580d5-2ed7-4ef5-8253-ccda7d05363e/-/preview/999x750/');"><img src="https://51g8k6uool.ucarecd.net/ce5580d5-2ed7-4ef5-8253-ccda7d05363e/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 5"></div>
-              <div class="project-slide" style="--slide-bg: url('https://51g8k6uool.ucarecd.net/949a5bbc-9df7-4724-a1f1-223ffd395d04/-/preview/1000x666/');"><img src="https://51g8k6uool.ucarecd.net/949a5bbc-9df7-4724-a1f1-223ffd395d04/-/preview/1000x666/" alt="February 2026 land clearing and sod project - photo 6"></div>
-            </div>
-            <button class="project-slider-btn project-slider-prev" aria-label="Previous photo">&#10094;</button>
-            <button class="project-slider-btn project-slider-next" aria-label="Next photo">&#10095;</button>
-            <div class="project-slider-dots">
-              <button class="project-slider-dot active" aria-label="Go to photo 1"></button>
-              <button class="project-slider-dot" aria-label="Go to photo 2"></button>
-              <button class="project-slider-dot" aria-label="Go to photo 3"></button>
-              <button class="project-slider-dot" aria-label="Go to photo 4"></button>
-              <button class="project-slider-dot" aria-label="Go to photo 5"></button>
-              <button class="project-slider-dot" aria-label="Go to photo 6"></button>
-            </div>
+          <div class="gallery-grid" style="margin-bottom: 32px;">
+            <div class="gallery-item"><img src="https://51g8k6uool.ucarecd.net/2220963e-4c7b-436a-bef5-9131d6d8122a/-/preview/459x1000/" alt="February 2026 land clearing and sod project - photo 1"></div>
+            <div class="gallery-item"><img src="https://51g8k6uool.ucarecd.net/751caff9-0812-4105-92c4-49d71576170f/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 2"></div>
+            <div class="gallery-item"><img src="https://51g8k6uool.ucarecd.net/49811694-ed60-4efd-9ddf-0a48ad702c5c/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 3"></div>
+            <div class="gallery-item"><img src="https://51g8k6uool.ucarecd.net/09f9ba46-7647-48bb-9666-7667dd5decba/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 4"></div>
+            <div class="gallery-item"><img src="https://51g8k6uool.ucarecd.net/ce5580d5-2ed7-4ef5-8253-ccda7d05363e/-/preview/999x750/" alt="February 2026 land clearing and sod project - photo 5"></div>
+            <div class="gallery-item"><img src="https://51g8k6uool.ucarecd.net/949a5bbc-9df7-4724-a1f1-223ffd395d04/-/preview/1000x666/" alt="February 2026 land clearing and sod project - photo 6"></div>
           </div>
 
           <h2>Project Overview</h2>
@@ -110,6 +98,14 @@
   </section>
 
   <div id="site-footer"></div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+    <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
 
   <script src="../script.js"></script>
 </body>
