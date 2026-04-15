@@ -263,45 +263,6 @@ function initLightbox() {
   });
 }
 
-// ===== Project Slider (recent work detail pages) =====
-function initProjectSlider() {
-  const slider = document.getElementById('projectSlider');
-  if (!slider) return;
-
-  const slides = slider.querySelectorAll('.project-slide');
-  const dots = slider.querySelectorAll('.project-slider-dot');
-  const prevBtn = slider.querySelector('.project-slider-prev');
-  const nextBtn = slider.querySelector('.project-slider-next');
-  if (!slides.length) return;
-
-  let current = 0;
-  let timer;
-
-  function show(index) {
-    slides[current].classList.remove('active');
-    if (dots[current]) dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    if (dots[current]) dots[current].classList.add('active');
-  }
-
-  function next() { show(current + 1); }
-  function prev() { show(current - 1); }
-
-  function restart() {
-    clearInterval(timer);
-    timer = setInterval(next, 5000);
-  }
-
-  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); restart(); });
-  if (nextBtn) nextBtn.addEventListener('click', () => { next(); restart(); });
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => { show(i); restart(); });
-  });
-
-  restart();
-}
-
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
@@ -309,6 +270,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryFilters();
   initContactForm();
   initHeroSlider();
-  initProjectSlider();
   initLightbox();
 });
