@@ -621,21 +621,44 @@ img {
 
 .project-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
+  overflow: hidden;
 }
 
 .project-slide.active {
   opacity: 1;
 }
 
+.project-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: var(--slide-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(32px) brightness(0.55);
+  transform: scale(1.2);
+  z-index: 0;
+}
+
 .project-slide img {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
 
