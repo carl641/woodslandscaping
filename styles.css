@@ -661,6 +661,11 @@ img {
   padding: 80px 0;
 }
 
+.home-blog {
+  padding: 80px 0;
+  background: var(--color-bg-alt);
+}
+
 .home-about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
