@@ -34,6 +34,7 @@ function renderHeader() {
           </ul>
         </li>
         <li><a href="${base}recent-work">Recent Work</a></li>
+        <li><a href="${base}blog">Blog</a></li>
         <li><a href="${base}gallery">Gallery</a></li>
         <li><a href="${base}contact" class="btn btn-nav">Get a Quote</a></li>
       </ul>
@@ -108,6 +109,7 @@ function renderFooter() {
         <div class="footer-col">
           <h4>Company</h4>
           <a href="${base}recent-work">Recent Work</a>
+          <a href="${base}blog">Blog</a>
           <a href="${base}gallery">Gallery</a>
           <a href="${base}contact">Contact</a>
           <a href="tel:+12567143490">Call Patrick</a>
