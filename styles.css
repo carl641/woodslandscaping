@@ -375,6 +375,31 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.page-header .areas-served {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  opacity: 0.95;
+}
+
+.page-header .areas-served a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-header .areas-served a:hover {
+  opacity: 0.85;
+}
+
+.page-header .areas-served span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
 .page-header p {
   font-size: 1.15rem;
   opacity: 0.9;
@@ -1246,6 +1271,14 @@ img {
 
   .page-header h1 {
     font-size: 1.8rem;
+  }
+
+  .page-header .areas-served {
+    font-size: 1.05rem;
+  }
+
+  .page-header .areas-served span {
+    font-size: 0.9rem;
   }
 
   .section-title {
