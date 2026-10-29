@@ -1104,6 +1104,108 @@ img {
   padding-left: 24px;
 }
 
+/* Service-area FAQ */
+.area-faq {
+  margin: 40px 0 8px;
+}
+
+.area-faq details {
+  border-bottom: 1px solid #e0e0da;
+  padding: 16px 0;
+}
+
+.area-faq details:first-of-type {
+  border-top: 1px solid #e0e0da;
+}
+
+.area-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-dark);
+}
+
+.area-faq summary:hover {
+  color: var(--color-primary);
+}
+
+.area-faq details p {
+  margin: 12px 0 0;
+}
+
+.area-faq .btn {
+  margin-top: 24px;
+}
+
+/* Service-area project features */
+.area-project {
+  padding: 64px 0;
+  background: var(--color-bg-alt);
+}
+
+.area-project-dark {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.area-project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.area-project img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.area-project h2 {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
+}
+
+.area-project p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.area-project-dark h2 {
+  color: #fff;
+}
+
+/* Service-area coverage map */
+.area-map {
+  padding: 72px 0;
+}
+
+.area-map h2 {
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
+}
+
+.area-map p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.area-map iframe {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin: 24px 0 16px;
+}
+
 /* ===== Reviews Section (home) ===== */
 .home-reviews {
   padding: 80px 0;
@@ -1310,8 +1412,17 @@ img {
   }
 
   .service-detail-grid,
-  .area-detail-grid {
+  .area-detail-grid,
+  .area-project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .area-project-grid {
+    gap: 24px;
+  }
+
+  .area-map iframe {
+    height: 320px;
   }
 
   .service-sidebar {
